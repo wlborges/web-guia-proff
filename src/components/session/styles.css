@@ -54,3 +54,24 @@
 #session form button:hover{
     opacity: 0.8;
 }
+
+#session .session-on {
+    display: flex;
+    flex-direction: column;
+}
+
+#session .session-on img {
+    width: 50%;
+    margin-left: 25%;
+}
+
+#session .session-on h1 {
+    margin-top: 3rem;
+    color: #FFF;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#session .session-on h1 span {
+    color: #6159CB;
+}
