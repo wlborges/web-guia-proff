@@ -5,7 +5,8 @@ import RobotHead from '../../assets/images/robot-head.svg'
 import './styles.css'
 const Session = () => {
     const [session, setSession] = useState(false)
-
+    const [name,setName] = useState('')
+    const [email,setEmail] = useState('')
     function handleSubmit(e: FormEvent) {
         e.preventDefault()
         setSession(!session)
@@ -19,11 +20,19 @@ const Session = () => {
                     <span>Iniciar Chat</span>
                     <div className="input-content">
                         <FiUser />
-                        <input type="text" placeholder="Digite seu nome" />
+                        <input type="text" 
+                        placeholder="Digite seu nome"
+                        value={name}
+                        onChange={(e) => { setName(e.target.value) }}
+                         />
                     </div>
                     <div className="input-content">
                         <FiMail />
-                        <input type="email" placeholder="Digite seu email" />
+                        <input type="email" 
+                        placeholder="Digite seu email"
+                        value={email}
+                        onChange={(e) => { setName(e.target.value) }}
+                        />
                     </div>
                     <button type="submit">INICIAR</button>
                 </form>
