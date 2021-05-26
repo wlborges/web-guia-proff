@@ -1,10 +1,11 @@
-import { FormEvent, useState } from 'react'
+import { FormEvent, useState, useContext } from 'react'
 import { FiUser, FiMail } from 'react-icons/fi'
 import RobotHead from '../../assets/images/robot-head.svg'
+import SessionContext from '../../contexts/session'
 
 import './styles.css'
 const Session = () => {
-    const [session, setSession] = useState(false)
+    const {session, setSession} = useContext(SessionContext)
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
     function handleSubmit(e: FormEvent) {
@@ -31,7 +32,7 @@ const Session = () => {
                         <input type="email" 
                         placeholder="Digite seu email"
                         value={email}
-                        onChange={(e) => { setName(e.target.value) }}
+                        onChange={(e) => { setEmail(e.target.value) }}
                         />
                     </div>
                     <button type="submit">INICIAR</button>

@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 import RobotImg from '../../assets/images/robot-img.svg'
 import RobotHead from '../../assets/images/robot-head.svg'
 import { IoMdSend } from 'react-icons/io'
 
 import './styles.css'
+import SessionContext from '../../contexts/session'
 const Chat = () => {
-    const [session, setSession] = useState(true)
+    const {session} = useContext(SessionContext)
     return (
         <div id="chat">
             {
