@@ -1,0 +1,15 @@
+#home-page{
+    display: grid;
+    grid-template-areas: 'sidebar session chat';
+    grid-template-columns: 5% 25% 70%;
+}
+
+#home-page .sidebar-content{
+    grid-area: sidebar;
+}
+#home-page .session-content{
+    grid-area: session;
+}
+#home-page .chat-content{
+    grid-area: chat;
+}

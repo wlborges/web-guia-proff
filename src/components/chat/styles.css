@@ -1,0 +1,23 @@
+#chat{
+    background: #262E35;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat .session-off{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat .session-off span{
+    margin-top: 2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    width: 60%;
+}

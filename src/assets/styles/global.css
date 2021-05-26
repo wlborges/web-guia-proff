@@ -1,0 +1,22 @@
+:root {
+    font-size: 60%;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1.6rem Roboto;
+}
+
+@media (min-width: 700px) {
+    :root {
+      font-size: 62.5%;
+    }
+}
