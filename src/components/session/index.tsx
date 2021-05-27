@@ -2,15 +2,20 @@ import { FormEvent, useState, useContext } from 'react'
 import { FiUser, FiMail } from 'react-icons/fi'
 import RobotHead from '../../assets/images/robot-head.svg'
 import SessionContext from '../../contexts/session'
+import Api from '../../services/api'
 
 import './styles.css'
 const Session = () => {
     const {session, setSession} = useContext(SessionContext)
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
-    function handleSubmit(e: FormEvent) {
+    async function handleSubmit(e: FormEvent) {
         e.preventDefault()
-        setSession(!session)
+
+        const create = await Api.get('/create')
+        try{
+            setSession(create.data.sessionId)
+        } catch(error){}
     }
 
     return (
