@@ -1,15 +1,30 @@
-#home-page{
-    display: grid;
-    grid-template-areas: 'sidebar session chat';
-    grid-template-columns: 5% 25% 70%;
+#home-page {
+    width: 100%;
 }
 
 #home-page .sidebar-content{
-    grid-area: sidebar;
+    display: none;
 }
-#home-page .session-content{
-    grid-area: session;
+
+.active {
+    display: none;
 }
-#home-page .chat-content{
-    grid-area: chat;
+@media(min-width: 700px){
+    #home-page{
+        display: grid;
+        grid-template-areas: 'sidebar session chat';
+        grid-template-columns: 5% 25% 70%;
+    }
+    
+    #home-page .sidebar-content{
+        display: block;
+        grid-area: sidebar;
+    }
+    #home-page .session-content{
+        display: block;
+        grid-area: session;
+    }
+    #home-page .chat-content{
+        grid-area: chat;
+    }
 }
