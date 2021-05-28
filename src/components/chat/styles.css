@@ -115,14 +115,10 @@
     display: flex;
     flex-direction: column;
     grid-gap: 8px;
-    overflow: auto;
     position: absolute;
     bottom: 8rem;
+    overflow: visible;
     animation: pop .25s ease;
-}
-
-#chat .session-on .chat-content .outgoing {
-    justify-content: flex-end;
 }
 
 .outgoing,
@@ -140,6 +136,10 @@
     box-shadow: 0 3px 6px rgba(0,0,0,.10);
 }
 
+.outgoing {
+    flex-direction: row-reverse;
+}
+
 .outgoing span{     
     background-color: #36404A;
     color: #ffffff;
@@ -153,8 +153,6 @@
 @media(min-width: 700px){
     .outgoing,
     .incoming span {
-    font-size: 2rem;
-    border-radius: 7px;
-    box-shadow: 0 3px 6px rgba(0,0,0,.10);
-}
+        font-size: 2rem;
+    }
 }
